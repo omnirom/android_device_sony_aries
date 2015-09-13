@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/shinano/BoardConfig.mk
+include device/sony/shinano-common/BoardConfig.mk
+include device/sony/shinano-common/BoardConfigOmni.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := D5803
 
@@ -21,5 +22,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688
 
 BOARD_KERNEL_CMDLINE += mem=1756M
 #BOARD_KERNEL_CMDLINE += mem=90M@0 mem=1666M@255M
+BUILD_KERNEL := true
 
 PRODUCT_VENDOR_KERNEL_HEADERS += device/sony/aries/kernel-headers
