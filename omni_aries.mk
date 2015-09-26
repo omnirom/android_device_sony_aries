@@ -16,7 +16,7 @@
 TARGET_KERNEL_SOURCE := kernel/sony/msm
 
 # Inherit AOSP Shinano common device parts
-$(call inherit-product, device/sony/sirius/aosp_d5803.mk)
+$(call inherit-product, device/sony/aries/aosp_d5803.mk)
 
 # Inherit Omni Shinano common device parts
 $(call inherit-product, device/sony/shinano-common/device_omni.mk)
