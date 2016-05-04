@@ -12,24 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/sony/msm
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 720x480
 
-# Inherit AOSP Shinano common device parts
+# TWRP
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+TW_THEME := portrait_hdpi
+
+# Inherit AOSP aries device parts
 $(call inherit-product, device/sony/aries/aosp_d5803.mk)
 
-# Inherit Omni Shinano common device parts
-$(call inherit-product, device/sony/shinano-common/device_omni.mk)
-
 # Inherit Omni GSM telephony parts
+$(call inherit-product, device/sony/common/radio.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit Omni product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    device/sony/aries/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
 
 # Override Product Name for OmniROM
 PRODUCT_NAME := omni_aries
