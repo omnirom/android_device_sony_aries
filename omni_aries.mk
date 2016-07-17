@@ -22,13 +22,6 @@ TW_THEME := portrait_hdpi
 # Inherit AOSP aries device parts
 $(call inherit-product, device/sony/aries/aosp_d5803.mk)
 
-# Inherit Omni GSM telephony parts
-$(call inherit-product, device/sony/common/radio.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit Omni product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
 # Override Product Name for OmniROM
 PRODUCT_NAME := omni_aries
 PRODUCT_MODEL := Xperia Z3 Compact
